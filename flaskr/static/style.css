@@ -1,0 +1,39 @@
+body {
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: whitesmoke;
+}
+
+.table {
+    width: 100%;
+    max-width: 30rem;
+    border: .2rem solid black;
+    border-radius: 1rem;
+    background-color: white;
+}
+.thead, .tr {
+    display: flex;
+    flex-direction: row;
+}
+
+.tbody {
+    display: flex;
+    flex-direction: column;
+}
+
+.td, .th {
+    padding: .3rem;
+    width: 50%;
+}
+
+.th {
+    border-bottom: .2rem solid black;;
+}
+
+.tr {
+    border: .1rem solid gray;
+}

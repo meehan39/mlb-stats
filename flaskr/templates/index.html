@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+    <title>Home Run Verdi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Standings</h1>
+    <div class="table">
+        <div class="thead">
+            <div class="th">Team</div>
+            <div class="th">Home Runs</div>
+        </div>
+        <div class="tbody">
+            {% for team in g.standings %}
+            <div class="tr">
+                <div class="td"><a href="/team?code={{ team['team_code'] }}">{{ team['team_name'] }}</a></div>
+                <div class="td">{{ team['home_runs'] }}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>

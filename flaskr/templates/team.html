@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+    <title>{{ g.team_name }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>{{ g.team_name }}</h1>
+    <div class="table">
+        <div class="thead">
+            <div class="th">Player</div>
+            <div class="th">Home Runs</div>
+        </div>
+        <div class="tbody">
+            {% for player in g.roster %}
+            <div class="tr">
+                <div class="td">{{ player['player_name'] }}</div>
+                <div class="td">{{ player['home_runs'] }}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
