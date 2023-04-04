@@ -1,6 +1,6 @@
 import statsapi
 import string
-from .static import *
+from static import *
 
 def get_teams():
     team_codes = []
