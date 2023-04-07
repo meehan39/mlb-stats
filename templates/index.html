@@ -4,17 +4,23 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Standings</h1>
+    <div class="page-header">
+        <img src="{{ url_for('static', filename='spiderman.PNG') }}"/>
+        <h1>Home Run Verdi</h1>
+        <img src="{{ url_for('static', filename='prisonmike.PNG') }}"/>
+    </div>
     <div class="table">
         <div class="thead">
-            <div class="th">Team</div>
-            <div class="th">Home Runs</div>
+            <div class="th header">Team</div>
+            <div class="th header">Home Runs</div>
+            <div class="th header">Top 4 HRs</div>
         </div>
         <div class="tbody">
             {% for team in g.standings %}
             <div class="tr">
-                <div class="td"><a href="/team?code={{ team['team_code'] }}">{{ team['team_name'] }}</a></div>
-                <div class="td">{{ team['home_runs'] }}</div>
+                <div class="td text"><a href="/team?code={{ team['team_code'] }}">{{ team['team_name'] }}</a></div>
+                <div class="td num">{{ team['home_runs'] }}</div>
+                <div class="td num">{{ team['top_4_hrs'] }}</div>
             </div>
             {% endfor %}
         </div>

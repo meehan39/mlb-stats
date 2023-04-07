@@ -44,8 +44,21 @@ def get_total_homeruns(team_data):
         total += player_data["home_runs"]
     return total
 
+def get_top_4_hrs(team_data):
+    all_hrs = []
+    for player_data in team_data["roster"]:
+        all_hrs.append(player_data["home_runs"])
+    all_hrs.sort(reverse=True)
+    top_4 = 0
+    for i in range(0, 4):
+        top_4 += all_hrs[i]
+    return top_4
+
+def sort_players_func(player_data):
+    return player_data["home_runs"]
+
 def sort_standings_func(team_data):
-    return team_data["home_runs"]
+    return team_data["top_4_hrs"]
 
 def get_player_ids():
     ids = {}

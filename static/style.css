@@ -1,23 +1,53 @@
 body {
     font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background-color: whitesmoke;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    font-size: xx-large;
+    background-color: hsl(201, 14%, 19%);
+}
+
+.page-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+h1 {
+    color: white;
+}
+img {
+    height: 10rem;
 }
 
 .table {
     width: 100%;
-    max-width: 30rem;
-    border: .2rem solid black;
     border-radius: 1rem;
-    background-color: white;
+    background-color: hsl(201, 14%, 19%);
+    color: lightgray;
+    overflow: hidden;
+    border: .2rem solid hsl(201, 14%, 10%);
 }
 .thead, .tr {
     display: flex;
     flex-direction: row;
+}
+
+a {
+    color: white;
+}
+
+.thead {
+    background-color: hsl(201, 14%, 10%);
+}
+
+.header {
+    display: flex;
+    justify-content: center;
 }
 
 .tbody {
@@ -26,14 +56,27 @@ body {
 }
 
 .td, .th {
-    padding: .3rem;
+    display: flex;
+    padding: 1rem;
     width: 50%;
 }
 
-.th {
-    border-bottom: .2rem solid black;;
+.num {
+    justify-content: center;
 }
 
-.tr {
-    border: .1rem solid gray;
+.text {
+    padding-left: 1rem;
+}
+
+.tr:hover {
+    background-color: #3282b8;
+}
+
+.tr:nth-child(even) {
+    background-color: rgb(61, 68, 73);
+}
+
+.tr:nth-child(even):hover {
+    background-color: #3282b8;
 }

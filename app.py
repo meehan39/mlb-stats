@@ -14,7 +14,8 @@ def home():
         g.standings.append({
             "team_code": team,
             "team_name": roster["team_name"],
-            "home_runs": get_total_homeruns(roster)
+            "home_runs": get_total_homeruns(roster),
+            "top_4_hrs": get_top_4_hrs(roster)
         })
         g.standings.sort(key=sort_standings_func, reverse=True)
     return render_template('index.html')
@@ -26,4 +27,5 @@ def team():
     g.team_code = team_code
     g.team_name = team_names[team_code]
     g.roster = get_roster(team_code)['roster']
+    g.roster.sort(key=sort_players_func, reverse=True)
     return render_template('team.html')
