@@ -58,7 +58,7 @@ def sort_players_func(player_data):
     return player_data["home_runs"]
 
 def sort_standings_func(team_data):
-    return team_data["top_4_hrs"]
+    return (team_data["top_4_hrs"], team_data["home_runs"])
 
 def get_player_ids():
     ids = {}
